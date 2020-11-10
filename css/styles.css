@@ -1,0 +1,173 @@
+input[type=text]{
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border: none;
+    width: 15rem;
+    height: 2.2rem;
+    padding-left: 10px;
+    background-color: rgba(0,0,0, 0.1); /* Black w/opacity/see-through */
+}
+    
+input[type=text]:focus {
+    outline: none;
+    border: none;
+    color: gray;
+    background-color: rgba(0,0,0, 0.1); /* Black w/opacity/see-through */
+}
+
+.yellow {
+    color: yellow;
+}
+
+.white {
+    color: white;
+}
+
+.gray {
+    color: darkgray;
+}
+
+body, html {
+    height: 100%;
+}
+
+.weather-container {
+    position: relative;
+    bottom: 65%;
+    text-align: center;
+}
+
+.seeker {
+    position: absolute;
+    top: 1%;
+    right: 0.5%;
+}
+
+.country {
+    font-size: 3rem;
+}
+
+.weather {
+    font-size: 7.5rem;
+}
+
+.description {
+    font-size: 2rem;
+}
+
+.vertical {
+    border-left: 6px solid black;
+    height: 250px;
+}
+
+.conditions {
+    font-size: 2rem;
+    text-align: left;
+    padding-top: 1.5rem;
+}
+
+/* @media (max-width: 750px) {
+    .image {
+        background-color: turquoise;
+    }
+} */
+
+/* Add weather images classes*/
+.weather-image {
+    /* Full height */
+  height: 100%;
+
+  /* Add the blur effect */
+  filter: blur(1px);
+  -webkit-filter: blur(1px);
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.clear {
+    background-image: url("../images/weather/clear\ sky\ day\ landscape.jpg");
+}
+
+.clear-night {
+    background-image: url("../images/weather/clear\ sky\ night\ landscape.jpg");
+}
+
+.thunderstorm {
+    background-image: url("../images/weather/thunderstorm\ landscape.jpg");
+}
+
+.rain {
+    background-image: url("../images/weather/drizzle\ day\ landscape.jpg");
+}
+
+.rain-night {
+    background-image: url("../images/weather/drizzle\ night\ ladnscape.jpg");
+}
+
+.drizzle {
+    background-image: url("../images/weather/drizzle\ day\ landscape.jpg");
+}
+
+.drizzle-night {    
+    background-image: url("../images/weather/drizzle\ night\ ladnscape.jpg");
+}
+
+.squall {
+    background-image: url("../images/weather/drizzle\ day\ landscape.jpg");
+}
+
+.squall-night {
+    background-image: url("../images/weather/drizzle\ night\ ladnscape.jpg");
+}
+
+.snow {
+    background-image: url("../images/weather/snow\ day\ landscape.jpg");
+}
+
+.snow-night {
+    background-image: url("../images/weather/snow\ night\ landscape.jpg");
+}
+
+.mist {
+    background-image: url("../images/weather/mist\ day\ landscape.jpg");
+}
+
+.smoke {
+    background-image: url("../images/weather/smoke\ landscape.jpg");
+}
+
+.haze {
+    background-image: url("../images/weather/haze\ landscape.jpg");
+}
+
+.dust {
+    background-image: url("../images/weather/dust\ landscape.jpg");
+}
+
+.fog {
+    background-image: url("../images/weather/fog\ landscape.jpg");
+}
+
+.sand {
+    background-image: url("../images/weather/sand\ landscape.jpg");
+}
+
+.ash {
+    background-image: url("../images/weather/dust\ landscape.jpg");
+}
+
+.tornado {
+    background-image: url("../images/weather/tornado\ landscape.jpg");
+}
+
+.clouds {
+    background-image: url("../images/weather/clouds\ day\ landscape.jpg");
+}
+
+.clouds-night {
+    background-image: url("../images/weather/clouds\ night\ landscape.jpg");
+}
