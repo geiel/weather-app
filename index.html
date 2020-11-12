@@ -17,32 +17,34 @@
     <link rel="stylesheet" href="css/styles.css">
     <title>Weather App</title>
 </head>
-<body>
-    <div class="weather-image clear"></div>
-    <div class="weather-container">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-md-6">
-                    <h2 class="country">PARIS, FR</h2>
-                    <h1 class="weather"><i class="flaticon-cloud"></i> 44°</h1>
-                    <h4 class="description">clean sky</h4>
-                </div>
-                <div class="col-xl-1 col-md-1">
-                    <div class="vertical"></div>
-                </div>
-                <div class="col-xl-5 col-md-5">
-                    <div class="conditions">
-                        <p>Clouds: 4</p>
-                        <p>Humidity: 74%</p>
-                        <p>Wind: 2.24mps</p>
-                    </div>
+<body class="weather-image clear">
+    <div class="seeker">
+        <input type="text" placeholder="search..." class="seeker-input seeker-white">
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xl-6 col-md-7 main-weather-content">
+                <h2 class="country">PARIS, FR</h2>
+                <h1 class="weather"><i class="flaticon-cloud"></i> 44°</h1>
+                <h4 class="description">clean sky</h4>
+            </div>
+            <div class="col-md-auto">
+                <div class="vertical"></div>
+            </div>
+            <div class="col-xl-5 col-md-4">
+                <div class="conditions">
+                    <p>Clouds: 4</p>
+                    <p>Humidity: 74%</p>
+                    <p>Wind: 2.24mps</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="seeker">
-        <input type="text" placeholder="search..." class="weather-input">
-    </div>
+    <footer class="footer">
+        <a href="https://github.com/geiel/weather-app">
+            <i class="fab fa-github fa-lg"></i> by Geiel Peguero
+        </a>
+    </footer>
 
     <script src="js/index.js"></script>
     <!-- Bootstrap -->

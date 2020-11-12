@@ -29,7 +29,7 @@ const setWeatherContent = (weather) => {
     document.querySelector(".description").textContent = description;
 }
 
-const inputWeather = document.querySelector(".weather-input");
+const inputWeather = document.querySelector(".seeker-input");
 inputWeather.addEventListener("keydown", function(event) {
     if (event.key === "Enter" || event.keyCode === 13) {
         getWheaterByQuery(inputWeather.value).then(weather => {

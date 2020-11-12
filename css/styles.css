@@ -1,4 +1,12 @@
-input[type=text]{
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    font-size: 7rem;
+}
+
+a {
+    color: inherit;
+}
+
+.seeker-input {
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     border-radius: 15px;
@@ -8,16 +16,35 @@ input[type=text]{
     padding-left: 10px;
     background-color: rgba(0,0,0, 0.1); /* Black w/opacity/see-through */
 }
-    
-input[type=text]:focus {
+
+.seeker-input:focus {
     outline: none;
     border: none;
     color: gray;
     background-color: rgba(0,0,0, 0.1); /* Black w/opacity/see-through */
 }
 
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
-    font-size: 7rem;
+.seeker-white {
+    background-color: rgba(255,255,255, 0.1);
+}
+
+.seeker-white:focus {
+    background-color: rgba(255,255,255, 0.1);
+    color: white;
+}
+
+.weather-image { 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.row {
+    padding-top: 14%;
 }
 
 .yellow {
@@ -32,20 +59,9 @@ input[type=text]:focus {
     color: gray;
 }
 
-body, html {
-    height: 100%;
-}
-
-.weather-container {
-    position: relative;
-    bottom: 65%;
-    text-align: center;
-}
-
 .seeker {
-    position: absolute;
-    top: 1%;
-    right: 0.5%;
+    margin: 0.7rem 0.7rem;
+    text-align: right;
 }
 
 .country {
@@ -61,35 +77,59 @@ body, html {
 }
 
 .vertical {
-    border-left: 6px solid black;
+    border: 3px solid black;
     height: 250px;
+    width: 0;
+}
+
+.main-weather-content {
+    text-align: center;
+    padding-left: 7rem;
 }
 
 .conditions {
     font-size: 2rem;
     text-align: left;
     padding-top: 1.5rem;
+    padding-left: 6rem;
 }
 
-/* @media (max-width: 750px) {
-    .image {
-        background-color: turquoise;
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    margin: 0.2rem 0.2rem 0.2rem;
+}
+
+@media (max-width: 1024px) {
+    .main-weather-content {
+        text-align: center;
+        padding-left: 15px;
     }
-} */
+    
+    .conditions {
+        font-size: 2rem;
+        text-align: left;
+        padding-top: 1.5rem;
+        padding-left: 15px;
+    }
+}
 
-/* Add weather images classes*/
-.weather-image {
-    /* Full height */
-  height: 100%;
+@media (max-width: 767px) {
+    .vertical {
+        border: 3px solid black;
+        height: 0;
+        width: 250px;
+        margin: 2rem auto 2rem;
+    }
 
-  /* Add the blur effect */
-  filter: blur(1px);
-  -webkit-filter: blur(1px);
+    .conditions {
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 0;
+        padding-left: 15px;
+    }
 
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .clear {
