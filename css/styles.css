@@ -16,6 +16,10 @@ input[type=text]:focus {
     background-color: rgba(0,0,0, 0.1); /* Black w/opacity/see-through */
 }
 
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before, [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+    font-size: 7rem;
+}
+
 .yellow {
     color: yellow;
 }
@@ -25,7 +29,7 @@ input[type=text]:focus {
 }
 
 .gray {
-    color: darkgray;
+    color: gray;
 }
 
 body, html {
@@ -101,18 +105,10 @@ body, html {
 }
 
 .rain {
-    background-image: url("../images/weather/drizzle\ day\ landscape.jpg");
+    background-image: url("../images/weather/rain\ day\ landscape.jpg");
 }
 
-.rain-night {
-    background-image: url("../images/weather/drizzle\ night\ ladnscape.jpg");
-}
-
-.drizzle {
-    background-image: url("../images/weather/drizzle\ day\ landscape.jpg");
-}
-
-.drizzle-night {    
+.drizzle {    
     background-image: url("../images/weather/drizzle\ night\ ladnscape.jpg");
 }
 
