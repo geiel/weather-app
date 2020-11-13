@@ -101,11 +101,23 @@ a {
     background-image: url("../images/weather/thunderstorm\ landscape.jpg");
 }
 
+.thunderstorm-night {
+    background-image: url("../images/weather/thunderstorm\ landscape.jpg");
+}
+
 .rain {
     background-image: url("../images/weather/rain\ day\ landscape.jpg");
 }
 
+.rain-night {
+    background-image: url("../images/weather/rain\ day\ landscape.jpg");
+}
+
 .drizzle {    
+    background-image: url("../images/weather/drizzle\ night\ ladnscape.jpg");
+}
+
+.drizzle-night {    
     background-image: url("../images/weather/drizzle\ night\ ladnscape.jpg");
 }
 
@@ -129,7 +141,15 @@ a {
     background-image: url("../images/weather/mist\ day\ landscape.jpg");
 }
 
+.mist-night {
+    background-image: url("../images/weather/mist\ day\ landscape.jpg");
+}
+
 .smoke {
+    background-image: url("../images/weather/smoke\ landscape.jpg");
+}
+
+.smoke-night {
     background-image: url("../images/weather/smoke\ landscape.jpg");
 }
 
@@ -137,7 +157,15 @@ a {
     background-image: url("../images/weather/haze\ landscape.jpg");
 }
 
+.haze-night {
+    background-image: url("../images/weather/haze\ landscape.jpg");
+}
+
 .dust {
+    background-image: url("../images/weather/dust\ landscape.jpg");
+}
+
+.dust-night {
     background-image: url("../images/weather/dust\ landscape.jpg");
 }
 
@@ -145,7 +173,15 @@ a {
     background-image: url("../images/weather/fog\ landscape.jpg");
 }
 
+.fog-night {
+    background-image: url("../images/weather/fog\ landscape.jpg");
+}
+
 .sand {
+    background-image: url("../images/weather/sand\ landscape.jpg");
+}
+
+.sand-night {
     background-image: url("../images/weather/sand\ landscape.jpg");
 }
 
@@ -153,7 +189,15 @@ a {
     background-image: url("../images/weather/dust\ landscape.jpg");
 }
 
+.ash-night {
+    background-image: url("../images/weather/dust\ landscape.jpg");
+}
+
 .tornado {
+    background-image: url("../images/weather/tornado\ landscape.jpg");
+}
+
+.tornado-night {
     background-image: url("../images/weather/tornado\ landscape.jpg");
 }
 
@@ -229,12 +273,24 @@ a {
     .thunderstorm {
         background-image: url("../images/weather/thunderstorm.jpg");
     }
-    
+
+    .thunderstorm-night {
+        background-image: url("../images/weather/thunderstorm.jpg");
+    }
+
     .rain {
+        background-image: url("../images/weather/drizzle\ day.jpg");
+    }
+
+    .rain-night {
         background-image: url("../images/weather/drizzle\ day.jpg");
     }
     
     .drizzle {    
+        background-image: url("../images/weather/drizzle\ day.jpg");
+    }
+
+    .drizzle-night {    
         background-image: url("../images/weather/drizzle\ day.jpg");
     }
     
@@ -257,32 +313,64 @@ a {
     .mist {
         background-image: url("../images/weather/mist\ day.jpg");
     }
+
+    .mist-night {
+        background-image: url("../images/weather/mist\ day.jpg");
+    }
     
     .smoke {
+        background-image: url("../images/weather/smoke.jpg");
+    }
+
+    .smoke-night {
         background-image: url("../images/weather/smoke.jpg");
     }
     
     .haze {
         background-image: url("../images/weather/haze.jpg");
     }
+
+    .haze-night {
+        background-image: url("../images/weather/haze.jpg");
+    }
     
     .dust {
+        background-image: url("../images/weather/dust.jpg");
+    }
+
+    .dust-night {
         background-image: url("../images/weather/dust.jpg");
     }
     
     .fog {
         background-image: url("../images/weather/fog.jpg");
     }
+
+    .fog-night {
+        background-image: url("../images/weather/fog.jpg");
+    }
     
     .sand {
+        background-image: url("../images/weather/sand.jpg");
+    }
+
+    .sand-night {
         background-image: url("../images/weather/sand.jpg");
     }
     
     .ash {
         background-image: url("../images/weather/dust.jpg");
     }
+
+    .ash-night {
+        background-image: url("../images/weather/dust.jpg");
+    }
     
     .tornado {
+        background-image: url("../images/weather/tornado.jpg");
+    }
+
+    .tornado-night {
         background-image: url("../images/weather/tornado.jpg");
     }
     
