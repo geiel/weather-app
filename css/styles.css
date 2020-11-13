@@ -101,37 +101,6 @@ a {
     margin: 0.2rem 0.2rem 0.2rem;
 }
 
-@media (max-width: 1024px) {
-    .main-weather-content {
-        text-align: center;
-        padding-left: 15px;
-    }
-    
-    .conditions {
-        font-size: 2rem;
-        text-align: left;
-        padding-top: 1.5rem;
-        padding-left: 15px;
-    }
-}
-
-@media (max-width: 767px) {
-    .vertical {
-        border: 3px solid black;
-        height: 0;
-        width: 250px;
-        margin: 2rem auto 2rem;
-    }
-
-    .conditions {
-        font-size: 2rem;
-        text-align: center;
-        padding-top: 0;
-        padding-left: 15px;
-    }
-
-}
-
 .clear {
     background-image: url("../images/weather/clear\ sky\ day\ landscape.jpg");
 }
@@ -206,4 +175,42 @@ a {
 
 .clouds-night {
     background-image: url("../images/weather/clouds\ night\ landscape.jpg");
+}
+
+@media (max-width: 1024px) {
+    .main-weather-content {
+        text-align: center;
+        padding-left: 15px;
+    }
+    
+    .conditions {
+        font-size: 2rem;
+        text-align: left;
+        padding-top: 1.5rem;
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .vertical {
+        border: 3px solid black;
+        height: 0;
+        width: 250px;
+        margin: 2rem auto 2rem;
+    }
+
+    .conditions {
+        font-size: 2rem;
+        text-align: center;
+        padding-top: 0;
+        padding-left: 15px;
+    }
+
+    .footer {
+        position: relative;
+    }
+
+    .clear {
+        background-image: url("../images/weather/clear\ sky\ day.jpg");
+    }
 }
