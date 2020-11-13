@@ -47,14 +47,6 @@ a {
     padding-top: 14%;
 }
 
-.white {
-    color: white;
-}
-
-.gray {
-    color: gray;
-}
-
 .seeker {
     margin: 0.7rem 0.7rem;
     text-align: right;
@@ -73,7 +65,7 @@ a {
 }
 
 .vertical {
-    border: 3px solid black;
+    border: 3px solid;
     height: 250px;
     width: 0;
 }
@@ -173,6 +165,22 @@ a {
     background-image: url("../images/weather/clouds\ night\ landscape.jpg");
 }
 
+.white {
+    color: white;
+}
+
+.white-vertical {
+    border-color: white;
+}
+
+.black-vertical {
+    border-color: black;
+}
+
+.black {
+    color: black;
+}
+
 @media (max-width: 1024px) {
     .main-weather-content {
         text-align: center;
@@ -189,7 +197,7 @@ a {
 
 @media (max-width: 767px) {
     .vertical {
-        border: 3px solid black;
+        border: 3px solid;
         height: 0;
         width: 250px;
         margin: 2rem auto 2rem;
@@ -200,6 +208,10 @@ a {
         text-align: center;
         padding-top: 0;
         padding-left: 15px;
+    }
+
+    .weather-image {
+        background-attachment: initial;
     }
 
     .footer {

@@ -1,4 +1,6 @@
 let actualWeather = "clear";
+let actualColor = "black";
+let actualVerticalColor = "black-vertical";
 let apiKey = "1ef8550400ece86661dfa0fc0e0af7d7";
 
 const getWheaterByQuery = async (query) => {
@@ -14,6 +16,8 @@ const getWheaterByCoorditates = async ({coords}) => {
 }
 
 const setImageByWeather = (weather) => {
+    console.log(weather);
+    setContentColorByWeather(weather);
     document.querySelector(".weather-image").classList.remove(actualWeather);
     document.querySelector(".weather-image").classList.add(weather.toLowerCase());
     actualWeather = weather.toLowerCase();
@@ -98,6 +102,68 @@ const getIcon = (description) => {
             break;
     }
     return icon;
+}
+
+const setContentColorByWeather = (weather) => {
+    
+    switch (weather) {
+        case "Clouds":
+            setColor("black");
+            break;
+        case "Clear":
+            setColor("white");
+            break;
+        case "Fog":
+            setColor("black");
+            break;
+        case "Mist":
+            setColor("white");
+            break;
+        case "Thunderstorm":
+            setColor("white");
+            break;
+        case "Rain":
+            setColor("white");
+            break;
+        case "Drizzle":
+            setColor("white");
+            break;
+        case "Squall":
+            setColor("white");
+            break;
+        case "Snow":
+            setColor("black");
+            break;
+        case "Smoke":
+            setColor("white");
+            break;
+        case "Haze":
+            setColor("black");
+            break;
+        case "Dust":
+            setColor("black");
+            break;
+        case "Sand":
+            setColor("white");
+            break;
+        case "Ash":
+            setColor("black");
+            break;
+        case "Tornado":
+            setColor("white");
+            break;
+        default:
+            break;
+    }
+}
+
+const setColor = (color) => {
+    document.querySelector(".container-fluid").classList.remove(actualColor);
+    document.querySelector(".container-fluid").classList.add(color);
+    document.querySelector(".vertical").classList.remove(actualVerticalColor);
+    document.querySelector(".vertical").classList.add(color + "-vertical");
+    actualColor = color;
+    actualVerticalColor = color + "-vertical";
 }
 
 const showWeatherByLocation = (position) => {
