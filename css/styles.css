@@ -20,7 +20,7 @@ a {
 .seeker-input:focus {
     outline: none;
     border: none;
-    color: gray;
+    color: black;
     background-color: rgba(0,0,0, 0.1); /* Black w/opacity/see-through */
 }
 
@@ -45,10 +45,6 @@ a {
 
 .row {
     padding-top: 14%;
-}
-
-.yellow {
-    color: yellow;
 }
 
 .white {
@@ -212,5 +208,77 @@ a {
 
     .clear {
         background-image: url("../images/weather/clear\ sky\ day.jpg");
+    }
+
+    .clear-night {
+        background-image: url("../images/weather/clear\ sky\ night.jpg");
+    }
+    
+    .thunderstorm {
+        background-image: url("../images/weather/thunderstorm.jpg");
+    }
+    
+    .rain {
+        background-image: url("../images/weather/drizzle\ day.jpg");
+    }
+    
+    .drizzle {    
+        background-image: url("../images/weather/drizzle\ day.jpg");
+    }
+    
+    .squall {
+        background-image: url("../images/weather/drizzle\ day.jpg");
+    }
+    
+    .squall-night {
+        background-image: url("../images/weather/drizzle\ night.jpg");
+    }
+    
+    .snow {
+        background-image: url("../images/weather/snow\ day.jpg");
+    }
+    
+    .snow-night {
+        background-image: url("../images/weather/snow\ night.jpg");
+    }
+    
+    .mist {
+        background-image: url("../images/weather/mist\ day.jpg");
+    }
+    
+    .smoke {
+        background-image: url("../images/weather/smoke.jpg");
+    }
+    
+    .haze {
+        background-image: url("../images/weather/haze.jpg");
+    }
+    
+    .dust {
+        background-image: url("../images/weather/dust.jpg");
+    }
+    
+    .fog {
+        background-image: url("../images/weather/fog.jpg");
+    }
+    
+    .sand {
+        background-image: url("../images/weather/sand.jpg");
+    }
+    
+    .ash {
+        background-image: url("../images/weather/dust.jpg");
+    }
+    
+    .tornado {
+        background-image: url("../images/weather/tornado.jpg");
+    }
+    
+    .clouds {
+        background-image: url("../images/weather/clouds\ day.jpg");
+    }
+    
+    .clouds-night {
+        background-image: url("../images/weather/clouds\ night.jpg");
     }
 }
