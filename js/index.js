@@ -80,45 +80,59 @@ const getIconAndSetColor = (weather) => {
             return getIconByTime("flaticon-cloudy", "flaticon-cloudy-2");
         case "Clear":
             setColor("white", "white");
+            setHeaderColor("#194572", "#151D20");
             return getIconByTime("flaticon-sun", "flaticon-full-moon");
         case "Fog":
             setColor("black", "white");
+            setHeaderColor("#C6DBDE", "#C6DBDE");
             return getIconByTime("flaticon-fog-1", "flaticon-fog-2");
         case "Mist":
             setColor("white", "black");
+            setHeaderColor("#D7D8DC", "#D7D8DC");
             return "flaticon-fog";
         case "Thunderstorm":
             setColor("white", "white");
+            setHeaderColor("#654664", "#654664");
             return "flaticon-thunder";
         case "Rain":
             setColor("white", "white");
+            setHeaderColor("#081B29", "#121F27");
             return "flaticon-rain-1";
         case "Drizzle":
             setColor("white", "white");
+            setHeaderColor("#081B29", "#121F27");
             return "flaticon-rain-3";
         case "Squall":
             setColor("white", "white");
+            setHeaderColor("#081B29", "#121F27");
             return "flaticon-rain";
         case "Snow":
             setColor("black", "white");
+            setHeaderColor("#FFFFFF", "#071622");
             return "flaticon-snowflake";
         case "Smoke":
             setColor("white", "black");
+            setHeaderColor("#A9969E", "#A9969E");
             return "flaticon-fog";
         case "Haze":
             setColor("black", "white");
+            setHeaderColor("#EEE3DF", "#EEE3DF");
             return getIconByTime("flaticon-fog-1", "flaticon-fog-2");
         case "Dust":
             setColor("black", "white");
+            setHeaderColor("#CCD0D3", "#CCD0D3");
             return getIconByTime("flaticon-fog-1", "flaticon-fog-2");
         case "Sand":
             setColor("white", "black");
+            setHeaderColor("#EFCA96", "#EFCA96");
             return getIconByTime("flaticon-fog-1", "flaticon-fog-2");
         case "Ash":
             setColor("black", "white");
+            setHeaderColor("#CCD0D3", "#CCD0D3");
             return "flaticon-fog";
         case "Tornado":
             setColor("white", "black");
+            setHeaderColor("#545D6D", "#545D6D");
             return "flaticon-tornado";
         default:
             break;

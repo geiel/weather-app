@@ -241,6 +241,8 @@ a {
         padding-top: 1.5rem;
         padding-left: 15px;
     }
+
+
 }
 
 @media (max-width: 767px) {
@@ -295,7 +297,7 @@ a {
     }
 
     .rain-night {
-        background-image: url("../images/weather/drizzle\ day.jpg");
+        background-image: url("../images/weather/drizzle\ night.jpg");
     }
     
     .drizzle {    
@@ -303,7 +305,7 @@ a {
     }
 
     .drizzle-night {    
-        background-image: url("../images/weather/drizzle\ day.jpg");
+        background-image: url("../images/weather/drizzle\ night.jpg");
     }
     
     .squall {
