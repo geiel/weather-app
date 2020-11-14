@@ -147,9 +147,9 @@ const setHeaderColor = (colorDay, colorNight) => {
     hour = (new Date()).getHours();
 
     if (hour < 18) {
-        document.querySelector("meta['theme-color']").setAttribute("content", colorDay);
+        document.querySelector("meta[name='theme-color']").setAttribute("content", colorDay);
     } else {
-        document.querySelector("meta['theme-color']").setAttribute("content", colorNight);
+        document.querySelector("meta[name='theme-color']").setAttribute("content", colorNight);
     }
 }
 
