@@ -3,6 +3,8 @@ let actualColor = "black";
 let actualVerticalColor = "black-vertical";
 let apiKey = "1ef8550400ece86661dfa0fc0e0af7d7";
 let hour = (new Date()).getHours();
+let timestamp = new Date(Date.now()+(new Date().getTimezoneOffset()*60000)).getTime();
+let utcHour = new Date(timestamp).getHours();
 
 const getWheaterByQuery = async (query) => {
     const response = await fetch("https://api.openweathermap.org/data/2.5/weather?q=" + query + "&appid=" +  apiKey + "&units=imperial");
@@ -18,14 +20,19 @@ const getWheaterByCoorditates = async ({coords}) => {
 
 const search = (input) => {
     getWheaterByQuery(input).then(weather => {
+        setHourByTimeZone(weather.timezone);
         setImageByWeather(weather.weather[0].main);
         setWeatherContent(weather);
         setWeatherConditions(weather);
     });
 }
 
+const setHourByTimeZone = (timezone) => {
+    const hourTime = Math.floor(timezone / 3600);
+    hour = utcHour + hourTime;
+}
+
 const setImageByWeather = (weather) => {
-    hour = (new Date()).getHours();
     document.querySelector(".weather-image").classList.remove(actualWeather);
 
     if (hour < 18) {
@@ -63,7 +70,6 @@ const setWeatherConditions = (weather) => {
 }
 
 const getIconByTime = (iconDay, iconNight) => {
-    hour = (new Date()).getHours();
     if (hour < 18) {
         return iconDay;
     } else {
@@ -140,7 +146,6 @@ const getIconAndSetColor = (weather) => {
 }
 
 const setColor = (colorDay, colorNight) => {
-    hour = (new Date()).getHours();
     document.querySelector(".container-fluid").classList.remove(actualColor);
     document.querySelector(".vertical").classList.remove(actualVerticalColor);
 
@@ -158,8 +163,6 @@ const setColor = (colorDay, colorNight) => {
 }
 
 const setHeaderColor = (colorDay, colorNight) => {
-    hour = (new Date()).getHours();
-
     if (hour < 18) {
         document.querySelector("meta[name='theme-color']").setAttribute("content", colorDay);
     } else {

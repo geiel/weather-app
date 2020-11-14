@@ -242,7 +242,9 @@ a {
         padding-left: 15px;
     }
 
-
+    .container-fluid {
+        padding-top: 5rem;
+    }
 }
 
 @media (max-width: 767px) {
