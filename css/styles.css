@@ -2,6 +2,10 @@
     font-size: 7rem;
 }
 
+body {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
 a {
     color: inherit;
 }
@@ -86,7 +90,7 @@ a {
     position: absolute;
     bottom: 0;
     width: 100%;
-    margin: 0.2rem 0.2rem 0.2rem;
+    padding: 0.2rem 0.2rem 0.2rem;
 }
 
 .clear {
@@ -232,7 +236,7 @@ a {
     }
     
     .conditions {
-        font-size: 2rem;
+        font-size: 1.8rem;
         text-align: left;
         padding-top: 1.5rem;
         padding-left: 15px;
@@ -256,6 +260,14 @@ a {
 
     .weather-image {
         background-attachment: initial;
+    }
+
+    .weather {
+        font-size: 6.5rem;
+    }
+
+    .country {
+        font-size: 2.5rem;
     }
 
     .footer {

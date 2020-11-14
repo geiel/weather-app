@@ -16,11 +16,19 @@ const getWheaterByCoorditates = async ({coords}) => {
     return json;
 }
 
+const search = (input) => {
+    getWheaterByQuery(input).then(weather => {
+        setImageByWeather(weather.weather[0].main);
+        setWeatherContent(weather);
+        setWeatherConditions(weather);
+    });
+}
+
 const setImageByWeather = (weather) => {
     hour = (new Date()).getHours();
     document.querySelector(".weather-image").classList.remove(actualWeather);
 
-    if (hour <= 18) {
+    if (hour < 18) {
         document.querySelector(".weather-image").classList.add(weather.toLowerCase());
         actualWeather = weather.toLowerCase();
     } else {
@@ -42,11 +50,7 @@ const setWeatherContent = (weather) => {
 const inputWeather = document.querySelector(".seeker-input");
 inputWeather.addEventListener("keydown", function(event) {
     if (event.key === "Enter" || event.keyCode === 13) {
-        getWheaterByQuery(inputWeather.value).then(weather => {
-            setImageByWeather(weather.weather[0].main);
-            setWeatherContent(weather);
-            setWeatherConditions(weather);
-        });
+        search(inputWeather.value);
     }
 });
 
@@ -60,7 +64,7 @@ const setWeatherConditions = (weather) => {
 
 const getIconByTime = (iconDay, iconNight) => {
     hour = (new Date()).getHours();
-    if (hour <= 18) {
+    if (hour < 18) {
         return iconDay;
     } else {
         return iconNight;
@@ -72,6 +76,7 @@ const getIconAndSetColor = (weather) => {
     switch (weather) {
         case "Clouds":
             setColor("black", "white");
+            setHeaderColor("#01C0C0", "#000000");
             return getIconByTime("flaticon-cloudy", "flaticon-cloudy-2");
         case "Clear":
             setColor("white", "white");
@@ -125,7 +130,7 @@ const setColor = (colorDay, colorNight) => {
     document.querySelector(".container-fluid").classList.remove(actualColor);
     document.querySelector(".vertical").classList.remove(actualVerticalColor);
 
-    if (hour <= 18) {
+    if (hour < 18) {
         document.querySelector(".container-fluid").classList.add(colorDay);
         document.querySelector(".vertical").classList.add(colorDay + "-vertical");
         actualColor = colorDay;
@@ -135,6 +140,16 @@ const setColor = (colorDay, colorNight) => {
         document.querySelector(".vertical").classList.add(colorNight + "-vertical");
         actualColor = colorNight;
         actualVerticalColor = colorNight + "-vertical";
+    }
+}
+
+const setHeaderColor = (colorDay, colorNight) => {
+    hour = (new Date()).getHours();
+
+    if (hour < 18) {
+        document.querySelector("meta['theme-color']").setAttribute("content", colorDay);
+    } else {
+        document.querySelector("meta['theme-color']").setAttribute("content", colorNight);
     }
 }
 
@@ -153,4 +168,5 @@ const getLocation = () => {
     }
 }
 
+search("paris");
 getLocation();
