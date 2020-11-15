@@ -1,2 +1,2 @@
 # WeatherApp
-Weather app with JavaScript and Bootstrap **[Live Demo](https://weather-io.herokuapp.com)**
+Weather app with JavaScript and Bootstrap **[Live Demo](https://weather-geiel-app.netlify.app)**
