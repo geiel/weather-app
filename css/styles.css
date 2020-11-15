@@ -2,6 +2,28 @@
     font-size: 7rem;
 }
 
+.seeker-white::-webkit-input-placeholder {
+    color:    #E0E0E0;
+}
+.seeker-white:-moz-placeholder {
+   color:    #E0E0E0;
+   opacity:  1;
+}
+.seeker-white::-moz-placeholder {
+   color:    #E0E0E0;
+   opacity:  1;
+}
+.seeker-white:-ms-input-placeholder {
+   color:    #E0E0E0;
+}
+.seeker-white::-ms-input-placeholder {
+   color:    #E0E0E0;
+}
+
+.seeker-white::placeholder { 
+   color:    #E0E0E0;
+}
+
 body {
     font-family: 'Nunito Sans', sans-serif;
 }
@@ -18,18 +40,19 @@ a {
     width: 15rem;
     height: 2.2rem;
     padding-left: 10px;
-    background-color: rgba(0,0,0, 0.1); /* Black w/opacity/see-through */
+    background-color: rgba(0,0,0, 0.1);
 }
 
 .seeker-input:focus {
     outline: none;
     border: none;
     color: black;
-    background-color: rgba(0,0,0, 0.1); /* Black w/opacity/see-through */
+    background-color: rgba(0,0,0, 0.1);
 }
 
 .seeker-white {
     background-color: rgba(255,255,255, 0.1);
+    color: white;
 }
 
 .seeker-white:focus {

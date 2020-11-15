@@ -2,9 +2,7 @@ let actualWeather = "clear";
 let actualColor = "black";
 let actualVerticalColor = "black-vertical";
 let apiKey = "1ef8550400ece86661dfa0fc0e0af7d7";
-let hour = (new Date()).getHours();
-let timestamp = new Date(Date.now()+(new Date().getTimezoneOffset()*60000)).getTime();
-let utcHour = new Date(timestamp).getHours();
+let utcHour = new Date();
 
 const getWheaterByQuery = async (query) => {
     const response = await fetch("https://api.openweathermap.org/data/2.5/weather?q=" + query + "&appid=" +  apiKey + "&units=imperial");
@@ -28,14 +26,17 @@ const search = (input) => {
 }
 
 const setHourByTimeZone = (timezone) => {
+    var timestamp = new Date(Date.now()+(new Date().getTimezoneOffset()*60000)).getTime();
+    utcHour = new Date(timestamp);
     const hourTime = Math.floor(timezone / 3600);
-    hour = utcHour + hourTime;
+    utcHour.setHours(utcHour.getHours() + hourTime);
+    console.log(utcHour);
 }
 
 const setImageByWeather = (weather) => {
     document.querySelector(".weather-image").classList.remove(actualWeather);
 
-    if (hour < 18) {
+    if (utcHour.getHours() < 18 && utcHour.getHours() > 6) {
         document.querySelector(".weather-image").classList.add(weather.toLowerCase());
         actualWeather = weather.toLowerCase();
     } else {
@@ -70,7 +71,7 @@ const setWeatherConditions = (weather) => {
 }
 
 const getIconByTime = (iconDay, iconNight) => {
-    if (hour < 18) {
+    if (utcHour.getHours() < 18 && utcHour.getHours() > 6) {
         return iconDay;
     } else {
         return iconNight;
@@ -114,7 +115,7 @@ const getIconAndSetColor = (weather) => {
             return "flaticon-rain";
         case "Snow":
             setColor("black", "white");
-            setHeaderColor("#FFFFFF", "#071622");
+            setHeaderColor("#FFFFFF", "#24444F");
             return "flaticon-snowflake";
         case "Smoke":
             setColor("white", "black");
@@ -148,13 +149,16 @@ const getIconAndSetColor = (weather) => {
 const setColor = (colorDay, colorNight) => {
     document.querySelector(".container-fluid").classList.remove(actualColor);
     document.querySelector(".vertical").classList.remove(actualVerticalColor);
+    document.querySelector(".seeker-input").classList.remove("seeker-white");
 
-    if (hour < 18) {
+    if (utcHour.getHours() < 18 && utcHour.getHours() > 6) {
+        document.querySelector(".seeker-input").classList.add("seeker-" + colorDay);
         document.querySelector(".container-fluid").classList.add(colorDay);
         document.querySelector(".vertical").classList.add(colorDay + "-vertical");
         actualColor = colorDay;
         actualVerticalColor = colorDay + "-vertical";
     } else {
+        document.querySelector(".seeker-input").classList.add("seeker-" + colorNight);
         document.querySelector(".container-fluid").classList.add(colorNight);
         document.querySelector(".vertical").classList.add(colorNight + "-vertical");
         actualColor = colorNight;
@@ -163,7 +167,7 @@ const setColor = (colorDay, colorNight) => {
 }
 
 const setHeaderColor = (colorDay, colorNight) => {
-    if (hour < 18) {
+    if (utcHour.getHours() < 18 && utcHour.getHours() > 6) {
         document.querySelector("meta[name='theme-color']").setAttribute("content", colorDay);
     } else {
         document.querySelector("meta[name='theme-color']").setAttribute("content", colorNight);
@@ -172,7 +176,7 @@ const setHeaderColor = (colorDay, colorNight) => {
 
 const showWeatherByLocation = (position) => {
     getWheaterByCoorditates(position).then(weather => {
-        console.log(weather);
+        setHourByTimeZone(weather.timezone);
         setImageByWeather(weather.weather[0].main);
         setWeatherContent(weather);
         setWeatherConditions(weather);
