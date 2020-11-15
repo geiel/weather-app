@@ -285,6 +285,10 @@ a {
         padding-left: 15px;
     }
 
+    .row {
+        padding-top: 0;
+    }
+
     .weather-image {
         background-attachment: initial;
     }
