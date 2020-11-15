@@ -87,7 +87,7 @@ const getIconAndSetColor = (weather) => {
             return getIconByTime("flaticon-cloudy", "flaticon-cloudy-2");
         case "Clear":
             setColor("white", "white");
-            setHeaderColor("#194572", "#151D20");
+            setHeaderColor("#194572", "#22252C");
             return getIconByTime("flaticon-sun", "flaticon-full-moon");
         case "Fog":
             setColor("black", "white");
