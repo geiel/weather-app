@@ -18,6 +18,7 @@ const getWheaterByCoorditates = async ({coords}) => {
 
 const search = (input) => {
     getWheaterByQuery(input).then(weather => {
+        console.log(weather);
         setHourByTimeZone(weather.timezone);
         setImageByWeather(weather.weather[0].main);
         setWeatherContent(weather);
@@ -30,7 +31,6 @@ const setHourByTimeZone = (timezone) => {
     utcHour = new Date(timestamp);
     const hourTime = Math.floor(timezone / 3600);
     utcHour.setHours(utcHour.getHours() + hourTime);
-    console.log(utcHour);
 }
 
 const setImageByWeather = (weather) => {
